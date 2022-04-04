@@ -36,6 +36,10 @@
     margin-bottom: 15px;
 }
 
+.allButton:hover{
+    background: #dd2266;
+}
+
 .outButton, .inButton{
     height: 40px;
     width: 69px;
@@ -51,6 +55,14 @@
     letter-spacing: 0em;
     text-align: center;
     cursor: pointer;
+}
+
+.outButton:hover{
+    background: #bec0c2;
+}
+
+.inButton:hover{
+    background: #bec0c2;
 }
 
 .divResumo{

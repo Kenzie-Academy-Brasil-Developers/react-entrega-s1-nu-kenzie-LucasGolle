@@ -27,3 +27,7 @@ header{
     cursor: pointer;
     border-radius: 8px;
 }
+
+.buttonHeader:hover{
+    background: #bec0c2;
+}
