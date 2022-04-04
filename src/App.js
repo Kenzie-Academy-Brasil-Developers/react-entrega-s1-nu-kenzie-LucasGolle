@@ -33,7 +33,7 @@ function App() {
    <div className='divMain'>
    <div className='divFormMoney'>
    <Form listTransactions={addTransitions} setListTransactions={setListTransactions}></Form>
-   <TotalMoney listTransactions={listTransactions}></TotalMoney>
+   {filterList.length > 0 && <TotalMoney listTransactions={listTransactions}></TotalMoney>}
    </div>
    <div className='divListCard'>
     <List listTransactions={listTransactions} setFilterList={setFilterList}></List>

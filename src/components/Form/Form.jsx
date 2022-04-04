@@ -28,6 +28,7 @@ const Form = ({ listTransactions, setListTransactions }) => {
               type="text"
               value={description}
               onChange={(event) => setDescription(event.target.value)}
+              required
             ></input>
           </label>
           <h2 className="titleEx">Ex: Compra Roupas</h2>
@@ -41,13 +42,14 @@ const Form = ({ listTransactions, setListTransactions }) => {
               type="number"
               value={value}
               onChange={(event) => setValue(event.target.value)}
+              required
             ></input>
           </label>
           </div>
           <div className="inputType">
           <label>
             Tipo do valor
-            <select className="typeInput" value={type} onChange={(e) => setType(e.target.value)}>
+            <select className="typeInput" value={type} required onChange={(e) => setType(e.target.value)}>
               {selects.map((item, index) => (
                 <option value={item.id}>{item.name}</option>
               ))}
