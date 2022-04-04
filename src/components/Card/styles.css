@@ -71,3 +71,28 @@
     cursor: pointer;
 }
 
+@media (min-width:1024px) {
+    
+    .greyClass, .greenClass{ 
+        width: 560px;
+
+}
+
+
+
+}
+
+@media (min-width:1440px) {
+    
+    .greyClass, .greenClass{ 
+        width: 760px;
+        padding-right: 15%;
+
+}
+
+
+
+}
+
+
+

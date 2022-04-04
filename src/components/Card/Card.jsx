@@ -2,12 +2,12 @@ import './styles.css'
 
 import { FaTrash } from "react-icons/fa"
 
-const Card = ({ listTransactions, handleTransitions }) => {
+const Card = ({ filterList, handleTransitions }) => {
 
     return (
       <>
         <div>
-          {listTransactions.map((item, index) => (
+          {filterList.map((item, index) => (
             <div className={item.type === "Entrada" ? "greenClass" : "greyClass"} key={index}>
               <div className="titlesDiv">
               <h1 className="titleCard">{item.description}</h1>

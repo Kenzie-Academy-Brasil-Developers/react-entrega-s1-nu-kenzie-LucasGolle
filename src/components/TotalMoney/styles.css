@@ -46,3 +46,15 @@
     align-items: center;
 }
 
+@media (min-width:768px) {
+    
+    .divTotalMoney{ 
+    padding: 30px;
+    margin-left: 15%;
+    width: 314px;
+}
+
+}
+
+
+

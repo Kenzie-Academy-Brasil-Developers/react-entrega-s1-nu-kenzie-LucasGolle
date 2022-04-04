@@ -1,14 +1,21 @@
 import "./styles.css"
+import Card from '../Card/Card'
 
-const List = ({ listTransactions, setListTransactions }) => {
+const List = ({ listTransactions, setFilterList }) => {
+
+  const filtrarTodos = () => {
+    setFilterList(listTransactions)
+  }
 
 
   const filtrarDespesas = () =>{
-    setListTransactions(listTransactions.filter(({type}) => type === "Despesa"))
+    const result = listTransactions.filter(({type}) => type === "Despesa")
+    setFilterList(result)
   }
 
   const filtrarEntradas = () =>{
-    setListTransactions(listTransactions.filter(({type}) => type === "Entrada"))
+    const result = listTransactions.filter(({type}) => type === "Entrada")
+    setFilterList(result)
   }
 
   return (
@@ -16,9 +23,9 @@ const List = ({ listTransactions, setListTransactions }) => {
       <div className="divResumo">
         <h1 className="titleList">Resumo financeiro</h1>
       <div className="divList">
-        <button onClick={() => listTransactions} className="allButton">Todos</button>
-        <button onClick={() => filtrarDespesas} className="inButton">Entradas</button>
-        <button onClick={() => filtrarEntradas} className="outButton">Despesas</button>
+        <button onClick={() => filtrarTodos()} className="allButton">Todos</button>
+        <button onClick={() => filtrarEntradas()} className="inButton">Entradas</button>
+        <button onClick={() => filtrarDespesas()} className="outButton">Despesas</button>
       </div>
       </div>
     </>

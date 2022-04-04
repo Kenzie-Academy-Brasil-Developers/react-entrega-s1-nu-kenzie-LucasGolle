@@ -1,5 +1,6 @@
 import './App.css';
 import { useState } from 'react';
+import { useEffect } from 'react';
 import Form from './components/Form/Form'
 import List from './components/List/List';
 import Card from './components/Card/Card'
@@ -8,7 +9,14 @@ import TotalMoney from './components/TotalMoney/TotalMoney'
 import Home from './components/homePage/HomePage'
 
 function App() {
+
   const [listTransactions, setListTransactions] = useState([])
+
+  const [filterList, setFilterList] = useState([])
+  
+  useEffect(() => {
+    setFilterList(listTransactions)
+  }, [listTransactions]);
 
   const addTransitions = (newListTransactions) =>{
     setListTransactions([...listTransactions, newListTransactions])
@@ -21,12 +29,17 @@ function App() {
 
   return (
     <>
-    <Home></Home>
    <Header></Header>
+   <div className='divMain'>
+   <div className='divFormMoney'>
    <Form listTransactions={addTransitions} setListTransactions={setListTransactions}></Form>
    <TotalMoney listTransactions={listTransactions}></TotalMoney>
-    <List listTransactions={listTransactions} setListTransactions={setListTransactions}></List>
-   <Card listTransactions={listTransactions} handleTransitions={handleTransitions}></Card>
+   </div>
+   <div className='divListCard'>
+    <List listTransactions={listTransactions} setFilterList={setFilterList}></List>
+   <Card filterList={filterList} handleTransitions={handleTransitions}></Card>
+   </div>
+   </div>
    </>
   );
 }
