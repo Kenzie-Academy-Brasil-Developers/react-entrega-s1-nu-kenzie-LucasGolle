@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Nunito&display=swap');
+
+.divList{
+    display: flex;
+    margin-top: 36px;
+    justify-content: space-around;
+    width: 300px;
+}
+
+.titleList{
+    font-family: 'Nunito';
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin-bottom: -20px;
+    margin-top: 20px;
+}
+
+.allButton{
+    height: 40px;
+    width: 69px;
+    border-radius: 8px;
+    background: #FD377E;
+    border: 1.4px solid #FD377E;
+    box-sizing: border-box;
+    border-radius: 8px;
+    font-family: 'Nunito';
+    color: #FFFFFF;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0em;
+    text-align: center;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+.outButton, .inButton{
+    height: 40px;
+    width: 69px;
+    border-radius: 8px;
+    background: #E9ECEF;
+    border: 1.4px solid #E9ECEF;
+    box-sizing: border-box;
+    border-radius: 8px;
+    font-family: 'Nunito';
+    color: #868E96;;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0em;
+    text-align: center;
+    cursor: pointer;
+}
+
+.divResumo{
+    display: grid;
+    justify-content: center;
+}
