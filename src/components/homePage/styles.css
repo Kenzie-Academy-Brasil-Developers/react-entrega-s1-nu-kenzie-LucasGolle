@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Nunito&display=swap');
+
+body{
+    background: rgba(33, 37, 41, 1);
+}
+
+.div1Home{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin-top: 214px;
+}
+
+.inicio{
+    padding: 13px 20px;
+    width: 241px;
+    height: 48px;
+    left: 256px;
+    top: 490px;
+    background: #FD377E;
+    border: 2px solid #FD377E;
+    box-sizing: border-box;
+    border-radius: 8px;
+    font-family: 'Inter';
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+    letter-spacing: 0em;
+    color:  rgba(255, 255, 255, 1);
+    cursor: pointer;
+}
+
+.inicio:hover{
+    background: #a71b4e;
+}
+
+.globalDiv{
+    display: flex;
+    justify-content: center;
+}
+
+.img1{
+    margin-bottom: 30px;
+}
+
+.img2{
+    margin-bottom: 28px;
+    width: 250px;
+}
+
+.img3{
+    margin-bottom: 28px;
+}
+
+.img4{
+    display: none;
+}
+
+@media (min-width:768px) {
+    
+    .globalDiv{
+        justify-content: space-around;
+    }
+
+    .img4{
+        display: flex;
+        width: 350px;
+        height: 350px;
+        align-items: center;
+        margin-top: 214px;
+    }
+
+}
+
+
+@media (min-width:1024px) {
+    
+    .img4{
+        display: flex;
+        width: 550px;
+        height: 550px;
+        align-items: center;
+        margin-top: 214px;
+    }
+
+    .div1Home{
+        align-content: center;
+    }
+
+}
