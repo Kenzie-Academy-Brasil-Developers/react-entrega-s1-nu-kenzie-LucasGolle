@@ -34,7 +34,7 @@ function App() {
 
   return (
       <>
-        {homePage ? (<Home/>)
+        {homePage ? (<Home toIndex={toIndex}/>)
       : <>(<Header home={toIndex}/>
       <div className="divMain">
         <div className="divFormMoney">
