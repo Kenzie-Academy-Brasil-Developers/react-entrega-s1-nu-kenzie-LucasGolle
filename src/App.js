@@ -1,6 +1,7 @@
 import "./App.css";
 import { useState } from "react";
 import { useEffect } from "react";
+import CardVazio from "./components/cardVazio";
 import Form from "./components/Form/Form";
 import List from "./components/List/List";
 import Card from "./components/Card/Card";
@@ -35,7 +36,7 @@ function App() {
   return (
       <>
         {homePage ? (<Home toIndex={toIndex}/>)
-      : <>(<Header home={toIndex}/>
+      : <><Header home={toIndex}/>
       <div className="divMain">
         <div className="divFormMoney">
           <Form listTransactions={addTransitions} setListTransactions={setListTransactions}/>
@@ -43,9 +44,10 @@ function App() {
         </div>
         <div className="divListCard">
           <List listTransactions={listTransactions} setFilterList={setFilterList}/>
+          {filterList.length < 1 && (<CardVazio/>)}
           <Card filterList={filterList} handleTransitions={handleTransitions}/>
         </div>
-      </div>)</>} 
+      </div></>} 
       </>
   );
 }
