@@ -2,9 +2,9 @@
 
 .homePageDiv {
   background: rgba(33, 37, 41, 1);
-  height: 1000px;
   display: flex;
   justify-content: center;
+  height: 100vh;
 }
 
 .div1Home {
