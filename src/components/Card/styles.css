@@ -5,7 +5,7 @@
     justify-content: space-around;
     background: #F8F9FA;
     border-radius: 4px;
-    border-left: 4px solid #E9ECEF;
+    border-left: 4px solid rgb(201, 22, 22);
     width: 300px;
     margin: 0 auto;
     margin-bottom: 32px;
@@ -86,7 +86,7 @@
     
     .greyClass, .greenClass{ 
         width: 760px;
-        padding-right: 15%;
+        margin-right: 100px;
 
 }
 
