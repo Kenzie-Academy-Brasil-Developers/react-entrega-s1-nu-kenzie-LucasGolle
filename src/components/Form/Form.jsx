@@ -4,7 +4,7 @@ import { ToastContainer, toast } from "react-toastify";
 
 import "react-toastify/dist/ReactToastify.css";
 
-const Form = ({ listTransactions, setListTransactions }) => {
+const Form = ({ listTransactions }) => {
   const [description, setDescription] = useState("");
   const [value, setValue] = useState("");
   const [type, setType] = useState("Entrada");
@@ -43,7 +43,6 @@ const Form = ({ listTransactions, setListTransactions }) => {
             type="text"
             value={description}
             onChange={(event) => setDescription(event.target.value)}
-            required
           ></input>
         </label>
         <h2 className="titleEx">Ex: Compra Roupas</h2>
@@ -58,7 +57,6 @@ const Form = ({ listTransactions, setListTransactions }) => {
                 type="number"
                 value={value}
                 onChange={(event) => setValue(event.target.value)}
-                required
               ></input>
             </label>
           </div>
@@ -68,10 +66,9 @@ const Form = ({ listTransactions, setListTransactions }) => {
               <select
                 className="typeInput"
                 value={type}
-                required
                 onChange={(e) => setType(e.target.value)}
               >
-                {selects.map((item, index) => (
+                {selects.map((item) => (
                   <option value={item.id}>{item.name}</option>
                 ))}
               </select>
@@ -82,9 +79,17 @@ const Form = ({ listTransactions, setListTransactions }) => {
           className="buttonInput"
           type="submit"
           onClick={() => {
-            data.description.length > 0 && listTransactions(data);
-            data.description.length > 0 && data.type === "Entrada" && toast.success(`Entrada adicionada com sucesso :D`)
-            data.description.length > 0 && data.type === "Despesa" && toast.error(`Despesa adicionada com sucesso`);
+            data.description.length > 0 && data.value.length && listTransactions(data);
+            data.description.length > 0 && data.value.length
+              ? data.type === "Entrada" &&
+                toast.success(`Entrada adicionada com sucesso :D`)
+              : toast.error(`Digite todos os campos`);
+            data.description.length > 0 &&
+              data.type === "Despesa" &&
+              toast.success(`Despesa adicionada com sucesso`);
+            setValue("");
+            setDescription("");
+            setType("Entrada")
           }}
         >
           Inserir valor
