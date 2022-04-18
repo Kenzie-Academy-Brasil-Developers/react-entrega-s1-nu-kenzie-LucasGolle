@@ -1,5 +1,4 @@
 import "./styles.css"
-import Card from '../Card/Card'
 
 const List = ({ listTransactions, setFilterList }) => {
 

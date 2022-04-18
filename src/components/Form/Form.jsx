@@ -28,7 +28,6 @@ const Form = ({ listTransactions, setListTransactions }) => {
               type="text"
               value={description}
               onChange={(event) => setDescription(event.target.value)}
-              required
             ></input>
           </label>
           <h2 className="titleEx">Ex: Compra Roupas</h2>
@@ -41,8 +40,8 @@ const Form = ({ listTransactions, setListTransactions }) => {
               placeholder="1 R$"
               type="number"
               value={value}
+              min="0"
               onChange={(event) => setValue(event.target.value)}
-              required
             ></input>
           </label>
           </div>
@@ -61,6 +60,9 @@ const Form = ({ listTransactions, setListTransactions }) => {
             type="submit"
             onClick={() => {
               listTransactions(data);
+              setDescription('')
+              setValue('')
+              setType('Entrada')
             }}
           >
             Inserir valor
